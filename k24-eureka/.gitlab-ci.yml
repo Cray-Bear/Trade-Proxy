@@ -1,0 +1,10 @@
+stages:
+  - deploy
+deploy:
+  stage: deploy
+  script:
+    - chmod +x make.sh && ./make.sh
+  only:
+    - master
+  tags:
+    - sshjd
